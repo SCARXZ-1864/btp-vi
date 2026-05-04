@@ -6,3 +6,5 @@ dist/
 build/
 *.log
 *.sqlite3
+.piptest/
+.tmp/
