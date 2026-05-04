@@ -6,53 +6,40 @@ services:
     env: python
     plan: free
     rootDir: backend
-
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.13
-
       - key: DATABASE_URL
         fromDatabase:
           name: nodues-db
           property: connectionString
-
       - key: SECRET_KEY
         generateValue: true
-
       - key: ALGORITHM
         value: HS256
-
       - key: ACCESS_TOKEN_EXPIRE_MINUTES
         value: "1440"
-
       - key: DEFAULT_ADMIN_EMAIL
         value: "admin@nodues.com"
-
       - key: DEFAULT_ADMIN_PASSWORD
         value: "secure_password_123"
-
       - key: DEFAULT_ADMIN_NAME
         value: "System Admin"
-
 
   - type: web
     name: nodues-frontend
     env: static
     rootDir: frontend
-
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-
     envVars:
       - key: VITE_API_URL
         fromService:
           type: web
           name: nodues-backend
           envVarKey: RENDER_EXTERNAL_URL
-
 
 databases:
   - name: nodues-db
