@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UniqueConstraint
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from backend.core.database import Base
+from core.database import Base
 
 class ClearanceRequest(Base):
     __tablename__ = "clearance_requests"

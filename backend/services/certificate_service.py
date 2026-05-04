@@ -4,9 +4,9 @@ from io import BytesIO
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from sqlalchemy.orm import Session
-from backend.models.certificate import Certificate
-from backend.models.clearance import ClearanceRequest, DepartmentApproval
-from backend.models.user import User
+from models.certificate import Certificate
+from models.clearance import ClearanceRequest, DepartmentApproval
+from models.user import User
 
 class CertificateService:
     @staticmethod

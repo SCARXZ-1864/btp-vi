@@ -2,7 +2,7 @@ from datetime import datetime
 
 from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 
-from backend.core.database import Base
+from core.database import Base
 
 
 class AuditLog(Base):

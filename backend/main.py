@@ -1,14 +1,14 @@
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from backend.core.config import settings
-from backend.core.database import engine, Base
-from backend.core.database import SessionLocal, get_db
-from backend.core.security import get_password_hash
-import backend.models  # noqa: F401
-from backend.models.user import User
-from backend.routes import auth, clearance, department, certificate
-from backend.services.certificate_service import CertificateService
+from core.config import settings
+from core.database import engine, Base
+from core.database import SessionLocal, get_db
+from core.security import get_password_hash
+import models  # noqa: F401
+from models.user import User
+from routes import auth, clearance, department, certificate
+from services.certificate_service import CertificateService
 
 # Create DB tables
 Base.metadata.create_all(bind=engine)

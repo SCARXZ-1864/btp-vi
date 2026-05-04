@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from datetime import datetime
-from backend.core.database import Base
+from core.database import Base
 
 class Certificate(Base):
     __tablename__ = "certificates"
