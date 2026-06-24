@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import Response
 from sqlalchemy.orm import Session
-from backend.core.database import get_db
-from backend.models.certificate import Certificate
-from backend.models.clearance import ClearanceRequest
-from backend.models.user import User
-from backend.services.certificate_service import CertificateService
-from backend.routes.auth import get_current_user
+from core.database import get_db
+from models.certificate import Certificate
+from models.clearance import ClearanceRequest
+from models.user import User
+from services.certificate_service import CertificateService
+from routes.auth import get_current_user
 
 router = APIRouter()
 

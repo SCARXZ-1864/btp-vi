@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from backend.core.database import get_db
-from backend.models.clearance import ClearanceRequest, DepartmentApproval
-from backend.models.department import Department
-from backend.schemas.clearance import ClearanceAction, ClearanceRequestResponse
-from backend.services.workflow_engine import WorkflowEngine
-from backend.routes.auth import get_current_user
-from backend.models.user import User
+from core.database import get_db
+from models.clearance import ClearanceRequest, DepartmentApproval
+from models.department import Department
+from schemas.clearance import ClearanceAction, ClearanceRequestResponse
+from services.workflow_engine import WorkflowEngine
+from routes.auth import get_current_user
+from models.user import User
 
 router = APIRouter()
 

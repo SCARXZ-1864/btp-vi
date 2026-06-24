@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from backend.models.clearance import ClearanceRequest, DepartmentApproval
-from backend.models.department import Department
-from backend.models.audit import AuditLog
+from models.clearance import ClearanceRequest, DepartmentApproval
+from models.department import Department
+from models.audit import AuditLog
 
 VALID_TRANSITIONS = {
     "PENDING": {"APPROVED", "REJECTED", "QUERY"},
